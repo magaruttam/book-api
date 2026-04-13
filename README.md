@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Books REST API
 
 A simple REST API to manage a list of books using Express.js.
@@ -131,3 +132,6 @@ curl -X DELETE http://localhost:3000/books/1
 ## Testing with curl or Postman
 
 You can test the API using curl commands (shown above) or import the endpoints into Postman.
+=======
+# book-api
+>>>>>>> 0803ba96859632c90e23e7698c07efd80627de71
