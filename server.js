@@ -5,20 +5,19 @@ const PORT = 3000;
 // Middleware
 app.use(express.json());
 
-// In-memory data store
-let books = [
-  { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
-  { id: 2, title: '1984', author: 'George Orwell' }
+// Inside memory data store
+const books = [
+  { id: 1, title: 'Live Long have Fun', author: 'Uttam Pulami Magar' },
+  { id: 2, title: 'Where Are You?', author: 'Uttam Magar' }
 ];
+const nextId = 3;
 
-let nextId = 3;
-
-// GET /books - Get all books
+//Get all books
 app.get('/books', (req, res) => {
   res.status(200).json(books);
 });
 
-// POST /books - Add a new book
+//Add a new book
 app.post('/books', (req, res) => {
   const { title, author } = req.body;
   
@@ -36,7 +35,7 @@ app.post('/books', (req, res) => {
   res.status(201).json(newBook);
 });
 
-// PUT /books/:id - Update a book by id
+// Update a book by id
 app.put('/books/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const { title, author } = req.body;
@@ -53,7 +52,7 @@ app.put('/books/:id', (req, res) => {
   res.status(200).json(books[bookIndex]);
 });
 
-// DELETE /books/:id - Delete a book by id
+//  Delete a book by id
 app.delete('/books/:id', (req, res) => {
   const id = parseInt(req.params.id);
   

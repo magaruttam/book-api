@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Books REST API
 
 A simple REST API to manage a list of books using Express.js.
@@ -39,10 +38,12 @@ curl http://localhost:3000/books
 **Response:** `200 OK`
 ```json
 [
-  { "id": 1, "title": "The Great Gatsby", "author": "F. Scott Fitzgerald" },
-  { "id": 2, "title": "1984", "author": "George Orwell" }
+ { id: 1, title: 'Live Long have Fun', author: 'Uttam Pulami Magar' },
+  { id: 2, title: 'Where Are You?', author: 'Uttam Magar' }
 ]
 ```
+
+![Book List](images/booklist.png)
 
 ### 2. POST /books
 Add a new book
@@ -71,6 +72,8 @@ curl -X POST http://localhost:3000/books \
 }
 ```
 
+![Add Book](images/add.png)
+
 ### 3. PUT /books/:id
 Update a book by ID
 
@@ -98,12 +101,16 @@ curl -X PUT http://localhost:3000/books/1 \
 }
 ```
 
+![Update Book](images/updatebook.png)
+
 **Error Response:** `404 Not Found`
 ```json
 {
   "error": "Book not found"
 }
 ```
+
+![Update Book Not Found](images/while%20update%20book%20is%20not%20found.png)
 
 ### 4. DELETE /books/:id
 Delete a book by ID
@@ -122,6 +129,8 @@ curl -X DELETE http://localhost:3000/books/1
 }
 ```
 
+![Delete Book](images/delete.png)
+
 **Error Response:** `404 Not Found`
 ```json
 {
@@ -132,6 +141,3 @@ curl -X DELETE http://localhost:3000/books/1
 ## Testing with curl or Postman
 
 You can test the API using curl commands (shown above) or import the endpoints into Postman.
-=======
-# book-api
->>>>>>> 0803ba96859632c90e23e7698c07efd80627de71
